@@ -5,15 +5,17 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
+# Exclude unnecessary files using .dockerignore
 COPY . /app
 
 # Install dependencies from requirements.txt
+# Ensure that the requirements.txt file is in the correct location in your repository
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 5000 available to the outside world
 EXPOSE 5000
 
-# Set environment variables
+# Set environment variables (optional)
 ENV NAME World
 
 # Run the application
