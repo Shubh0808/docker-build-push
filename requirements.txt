@@ -1,3 +1,5 @@
+flask==2.1.0
+requests>=2.31,<3
 blinker==1.9.0
 click==8.2.0
 Flask==3.1.1
